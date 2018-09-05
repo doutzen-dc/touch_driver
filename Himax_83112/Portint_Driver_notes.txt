@@ -1,0 +1,4 @@
+Incell驱动调试请注意:
+1. lk和kernel porch设定和上电流程请flow Himax规格书, 显示时序不对将影响TP工作, 有疑问请联系对应的显示FAE.
+2. TP固件已包含LCD initial code, IC会在复位成功后下code(LCD/TP RST最后都需要拉高到I/O准位), 系统LCD上电initial code只需下11 29, .
+3. 打开#define HX_RST_PIN_FUNC宏, TP rst一开机需要默认置高或者flow LCD RST.以上如仍有问题请联系对应的TP FAE.
